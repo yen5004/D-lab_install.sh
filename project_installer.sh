@@ -168,7 +168,10 @@ done
 # Install command logger
 
 cd $git_folder && cd cmd_loggr
-sudo chmod 777 cli_loggr.sh 
+echo "...this is cli_logger location: $PWD"
+sudo chmod 777 cli_loggr.sh
+echo "This is grep of cli_loggr"
+ls -la | grep cli_loggr
 ./cli_loggr
 echo "Installed 'cli_loggr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
 
