@@ -121,7 +121,6 @@ repo_urls=(
 "https://github.com/yen5004/1-liner-ls--la-.git"
 "https://github.com/yen5004/THM_BashScripting.git"
 "https://github.com/yen5004/Bash-Oneliner.git"
-"https://github.com/yen5004/updog.git"
 "https://github.com/cheat/cheat.git"
 "https://github.com/yen5004/GitLab_help.git"
 "https://github.com/yen5004/SCRIPTS.git"
@@ -129,6 +128,9 @@ repo_urls=(
 "https://github.com/yen5004/cheat_helper.git"
 "https://github.com/yen5004/Bash-Oneliner.git"
 "https://github.com/yen5004/cmd_loggr.git"
+"https://github.com/tmux-plugins/tpm.git"
+"https://github.com/tmux-plugins/list.git"
+"https://github.com/tmux-plugins/tmux-logging.git"
 ""
 )
 
@@ -158,11 +160,6 @@ done
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Python installs
 
-# Start python install of updog
-cd $git_folder
-pip3 install updog
-echo "Installed updog - $(get_timestamp)" | tee -a $logg
-cd $git_folder
 
 #@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 # Golang installs:
@@ -172,15 +169,13 @@ cd $git_folder
 
 cd $git_folder && cd cmd_loggr
 sudo chmod 777 cli_logr.sh 
-sudo chmod 777 tmux_loggr.sh
 ./cli_loggr
+echo "Installed 'cli_logr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
+
 cd $git_folder/cmd_loggr
-./tmux_logger.sh
-
-
-echo "Copied 'cmd_logr_install.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
-./cmd_logr_install.sh
-echo "Installed 'cmd_logr_install.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
+sudo chmod 777 tmux_loggr.sh
+./tmux_loggr.sh
+echo "Installed 'tmux_loggr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
 cd $git_folder
 
 ################
@@ -201,4 +196,4 @@ sudo chmod 777 personal_cheatsheets.sh
 echo "Installed 'personal_cheatsheets.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
 cd $git_folder
 
-echo "Install completed - $(get_timestamp)" | tee -a $logg
+echo "Project_installer completed - $(get_timestamp)" | tee -a $logg
