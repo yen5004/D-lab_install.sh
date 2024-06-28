@@ -171,8 +171,8 @@ cd $git_folder/cmd_loggr
 echo "...this is cli_logger location: $PWD"
 sudo chmod 777 cli_loggr.sh
 echo "This is grep of cli_loggr"
-ls -la | grep cli_loggr
-./cli_loggr
+ls -la | grep cli_loggr.sh
+./cli_loggr.sh
 echo "Installed 'cli_loggr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
 
 cd $git_folder/cmd_loggr
