@@ -216,8 +216,8 @@ echo "TED-User: '$name'" >> ~/.bashrc
 echo "ifconfig" >> ~/.bashrc
 echo 'note="use exit to  close script"' >> ~/.bashrc
 echo 'echo $note' >> ~/.bashrc
-echo "Command logger install complete - $(get_timestamp)" | tee -a $logg
-echo "cmd_logr_install.sh finished! - $(get_timestamp)" | tee -a $logg
+echo "Command logger install complete"
+echo "cmd_logr_install.sh finished!"
 
 EOF
 
