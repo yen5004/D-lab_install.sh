@@ -168,9 +168,9 @@ done
 # Install command logger
 
 cd $git_folder && cd cmd_loggr
-sudo chmod 777 cli_logr.sh 
+sudo chmod 777 cli_loggr.sh 
 ./cli_loggr
-echo "Installed 'cli_logr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
+echo "Installed 'cli_loggr.sh' at: $PWD - $(get_timestamp)" | tee -a $logg
 
 cd $git_folder/cmd_loggr
 sudo chmod 777 tmux_loggr.sh
