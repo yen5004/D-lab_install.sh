@@ -167,7 +167,7 @@ done
 ###############################
 # Install command logger
 
-cd $git_folder/cd cmd_loggr
+cd $git_folder/cmd_loggr
 echo "...this is cli_logger location: $PWD"
 sudo chmod 777 cli_loggr.sh
 echo "This is grep of cli_loggr"
